@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Admin | Tirth Shah</title>
+  <meta name="description" content="Admin dashboard for portfolio contact messages." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <div class="bg-effects" aria-hidden="true">
+    <span class="blur-circle circle-1"></span>
+    <span class="blur-circle circle-2"></span>
+    <span class="blur-circle circle-3"></span>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header class="header">
+    <nav class="navbar container">
+      <a href="/" class="logo">
+        <span class="logo-box">TS</span>
+        <span>Admin Dashboard</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Back to Site</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="admin-shell">
+    <div class="container">
+      <section class="admin-login" id="adminLogin">
+        <div class="admin-login-card glass">
+          <p class="section-tag">Admin Access</p>
+          <h1>View contact messages saved from your portfolio.</h1>
+          <p class="login-note">
+            If an admin password is configured, enter it below. If not, local access will work directly.
+          </p>
+
+          <form class="admin-login-form" id="adminLoginForm">
+            <label>
+              Admin Password
+              <input
+                type="password"
+                name="password"
+                id="adminPassword"
+                placeholder="Enter admin password"
+                autocomplete="current-password"
+              />
+            </label>
+
+            <button type="submit" class="btn btn-primary">Open Dashboard</button>
+          </form>
+
+          <p class="admin-note" id="adminNote"></p>
+        </div>
+      </section>
+
+      <section class="admin-dashboard" id="adminDashboard" hidden>
+        <div class="admin-header">
+          <div class="admin-header-copy">
+            <p class="section-tag">Inbox</p>
+            <h1>Contact messages</h1>
+            <p>Review the latest submissions from your portfolio contact form.</p>
+          </div>
+
+          <div class="admin-actions">
+            <a href="/" class="btn btn-secondary">Open Portfolio</a>
+            <button type="button" class="btn btn-secondary" id="logoutButton">Logout</button>
+          </div>
+        </div>
+
+        <div class="admin-stats">
+          <article class="admin-stat glass">
+            <h3 id="totalMessages">0</h3>
+            <p>Total messages</p>
+          </article>
+          <article class="admin-stat glass">
+            <h3 id="uniqueEmails">0</h3>
+            <p>Unique emails</p>
+          </article>
+          <article class="admin-stat glass">
+            <h3 id="latestMessageDate">-</h3>
+            <p>Latest message</p>
+          </article>
+        </div>
+
+        <div class="admin-panel glass">
+          <div class="admin-toolbar">
+            <h2>Saved Messages</h2>
+            <input type="search" id="messageSearch" placeholder="Search by name, email, or message" />
+          </div>
+
+          <div class="messages-grid" id="messagesGrid"></div>
+        </div>
+
+        <div class="admin-empty glass" id="adminEmpty" hidden>
+          <h2>No messages yet</h2>
+          <p>Your contact form is ready. New submissions will appear here.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "myfiles",
+  "version": "1.0.0",
+  "description": "Portfolio website with contact form backend and SQLite database.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "nodemailer": "^8.0.4",
+    "sqlite3": "^6.0.1"
+  }
+}
