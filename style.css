@@ -722,6 +722,14 @@ textarea {
   font-weight: 500;
 }
 
+.hidden-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
 .contact-form input,
 .contact-form textarea,
 .admin-login-form input,
